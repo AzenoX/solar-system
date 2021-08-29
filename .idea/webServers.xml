@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="837e7986-0953-4243-8ec2-dcdecf4238f1" name="HeavenOVH">
+        <fileTransfer rootFolder="/var/www/alexishayat.me/beta" accessType="SFTP" host="vps717945.ovh.net" port="22" sshConfigId="827d8bd2-546b-4b7c-a134-3458a7b0532e" sshConfig="root@vps717945.ovh.net:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

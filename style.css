@@ -1,0 +1,142 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+canvas{
+  /*Display*/
+
+  /*Positioning*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  /*Box Model*/
+
+  /*Typography*/
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
+
+body{
+  /*Display*/
+
+  /*Positioning*/
+
+  /*Box Model*/
+  height: 656900px;
+
+  /*Typography*/
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
+
+.fixedBottom{
+  /*Display*/
+
+  /*Positioning*/
+  position: fixed;
+  top: 90vh;
+  left: 50%;
+  z-index: 9999999;
+
+  /*Box Model*/
+
+  /*Typography*/
+
+  /*Manipulation*/
+  transform: translateX(-50%);
+
+  /*Misc*/
+
+}
+
+nav{
+  /*Display*/
+
+  /*Positioning*/
+  position: fixed;
+  top: 5vh;
+  right: 2vw;
+  z-index: 9999999;
+
+  /*Box Model*/
+
+  /*Typography*/
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
+
+nav > div{
+  /*Display*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*Positioning*/
+
+  /*Box Model*/
+  background: rgba(25, 118, 210, 0.8);
+  margin-bottom: 1vh;
+  padding: 0.2em 1em;
+
+  /*Typography*/
+
+  /*Manipulation*/
+  clip-path: polygon(0% 0%, 95% 0%, 100% 15%, 100% 100%, 10% 100%, 0% 70%);
+  transform: translateX(0);
+  transition: transform 0.15s ease-in-out;
+
+  /*Misc*/
+  filter: drop-shadow(0 0 3px #000);
+  cursor: pointer;
+}
+nav > div:hover{
+  transform: translateX(-1vw);
+}
+
+nav > div > img{
+  /*Display*/
+
+  /*Positioning*/
+
+  /*Box Model*/
+  height: 4vh;
+  margin-right: 40px;
+
+  /*Typography*/
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
+
+nav > div > p{
+  /*Display*/
+
+  /*Positioning*/
+
+  /*Box Model*/
+
+  /*Typography*/
+  font-size: 1.2em;
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
