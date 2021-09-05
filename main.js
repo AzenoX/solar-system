@@ -284,8 +284,6 @@ Object.entries(planets).forEach(([name, data]) => {
         rings.rotation.z = THREE.Math.degToRad(rings_rotation_z);
         scene.add(rings);
     }
-
-    console.log(name, split(planets[name]['distance']), planets[name]['scroll_distance'], planet.position.z);
 });
 
 
