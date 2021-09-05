@@ -1,6 +1,8 @@
 import './style.css'
 import * as THREE from 'three';
 
+import MicroModal from 'micromodal';
+
 //Images
 import imgSun from './img/planets/planets/8k_sun.jpg';
 import imgMercury from './img/planets/planets/8k_mercury.jpg';
@@ -484,31 +486,24 @@ navElements.forEach((item) => {
 function split(n) {
     return Number(n).toLocaleString('en-US');
 }
-
-
 function goTo(scroll){
     window.scrollTo({
         top: scroll,
         behavior: 'smooth'
     });
 }
-
 function convertKmToScroll(km){
     return km / reduceFactor;
 }
-
 function convertScrollToKm(scroll){
     return scroll * reduceFactor;
 }
-
 function convertKmToUa(km){
     return km / _ua;
 }
-
 function convertUaToKm(ua){
     return ua * _ua;
 }
-
 function isBetween(num, min, max, exclusive = true){
     if(exclusive){
         return num >= min && num <= max;
@@ -517,7 +512,6 @@ function isBetween(num, min, max, exclusive = true){
         return num > min && num < max;
     }
 }
-
 function secondsToDhms(seconds) {
     seconds = Number(seconds);
     const d = Math.floor(seconds / (3600*24));
@@ -532,3 +526,7 @@ function secondsToDhms(seconds) {
 
     return dDisplay + hDisplay + mDisplay + sDisplay;
 }
+
+document.querySelector('#openInfoModal').addEventListener('click', () => {
+    MicroModal.show('modal-1', {});
+});

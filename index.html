@@ -101,6 +101,10 @@
 
     <p class="fixedBottom">Distance from the sun: <span id="distance_from_the_sun"></span></p>
 
+    <div class="fixedInfos" id="openInfoModal">
+      <p>i</p>
+    </div>
+
     <nav>
       <div class="navTo" data-nav="sun">
         <img src="img/planets/rounded/sun.png" alt="Sun">
@@ -146,7 +150,7 @@
         <b>Sun</b>
         <br><br>
 
-        <p class="desc">The Sun is the Solar System's star and by far its most massive component. Its large mass, which comprises 99.86% of all the mass in the Solar System, produces temperatures and densities in its core high enough to sustain nuclear fusion of hydrogen into helium, making it a main-sequence star. This releases an enormous amount of energy, mostly radiated into space as electromagnetic radiation peaking in visible light. The Sun's temperature is intermediate between that of the hottest stars and that of the coolest stars.</p>
+        <p class="desc">The Sun is the Solar System's star and by far its most massive component.<br><br>Its large mass, which comprises 99.86% of all the mass in the Solar System, produces temperatures and densities in its core high enough to sustain nuclear fusion of hydrogen into helium, making it a main-sequence star.<br>This releases an enormous amount of energy, mostly radiated into space as electromagnetic radiation peaking in visible light. The Sun's temperature is intermediate between that of the hottest stars and that of the coolest stars.</p>
 
         <br><br>
         <b>Informations:</b>
@@ -570,6 +574,47 @@
         <div class="row">
           <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
         </div>
+      </div>
+    </div>
+
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Informations
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+
+          <p style="font-size: 1.2em; font-weight: bold;">
+            Sources:
+          </p>
+
+          <br>
+
+          <p>
+            Wikipedia (Text and Informations):
+          </p>
+          <ul style="margin-left: 20px;">
+            <li><a href="https://en.wikipedia.org/wiki/Solar_System" target="_blank" class="link">https://en.wikipedia.org/wiki/Solar_System</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_solaire" target="_blank" class="link">https://fr.wikipedia.org/wiki/Syst%C3%A8me_solaire</a></li>
+          </ul>
+
+          <br>
+
+          <p>
+            Solar System Scope (Textures):
+          </p>
+          <ul style="margin-left: 20px;">
+            <li><a href="https://www.solarsystemscope.com/textures/" target="_blank" class="link">https://www.solarsystemscope.com/textures/</a></li>
+          </ul>
+
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn modal__btn-primary" data-micromodal-close aria-label="Close this dialog window" autofocus>Close</button>
+        </footer>
       </div>
     </div>
 
