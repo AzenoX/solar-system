@@ -4,13 +4,13 @@ import * as THREE from 'three';
 import MicroModal from 'micromodal';
 
 //Images
-import imgSun from './img/planets/planets/8k_sun.jpg';
-import imgMercury from './img/planets/planets/8k_mercury.jpg';
-import imgVenus from './img/planets/planets/4k_venus_atmosphere.jpg';
-import imgEarth from './img/planets/planets/8k_earth_nightmap.jpg';
-import imgMars from './img/planets/planets/8k_mars.jpg';
-import imgJupiter from './img/planets/planets/8k_jupiter.jpg';
-import imgSaturn from './img/planets/planets/8k_saturn.jpg';
+import imgSun from './img/planets/planets/2k_sun.jpg';
+import imgMercury from './img/planets/planets/2k_mercury.jpg';
+import imgVenus from './img/planets/planets/2k_venus_atmosphere.jpg';
+import imgEarth from './img/planets/planets/2k_earth_nightmap.jpg';
+import imgMars from './img/planets/planets/2k_mars.jpg';
+import imgJupiter from './img/planets/planets/2k_jupiter.jpg';
+import imgSaturn from './img/planets/planets/2k_saturn.jpg';
 import imgUranus from './img/planets/planets/2k_uranus.jpg';
 import imgNeptune from './img/planets/planets/2k_neptune.jpg';
 
