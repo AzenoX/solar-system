@@ -11,12 +11,95 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+      *,*::before,*::after{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Montserrat', sans-serif;
+      }
+      #loading{
+        --accent: #037d96;
+
+        /*Display*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        /*Positioning*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 9999999999;
+
+        /*Box Model*/
+        background: #212121;
+
+        /*Typography*/
+        color: var(--accent);
+        font-family: 'Montserrat', sans-serif;
+
+        /*Manipulation*/
+
+        /*Misc*/
+
+      }
+      #loading .title{
+        /*Display*/
+
+        /*Positioning*/
+
+        /*Box Model*/
+        width: 20%;
+
+        /*Typography*/
+        font-size: 2em;
+        text-align: left;
+
+        /*Manipulation*/
+
+        /*Misc*/
+
+      }
+      #loading .subtitle{
+        /*Display*/
+
+        /*Positioning*/
+
+        /*Box Model*/
+        width: 20%;
+
+        /*Typography*/
+        font-size: 1.2em;
+        text-align: left;
+
+        /*Manipulation*/
+        transform: translateX(20%);
+
+        /*Misc*/
+
+      }
+      #loading #loadingText{
+        display: inline-block;
+      }
+    </style>
   </head>
 
   <body>
+    <div id="loading">
+      <p class="title">Loading<span id="dots"></span></p>
+      <p class="subtitle">Loading <span id="loadingText">assets</span></p>
+    </div>
+
+
     <canvas id="bg"></canvas>
 
-    <p class="fixedBottom">Distance from the sun: <span id="distance_from_the_sun"></span> km</p>
+    <p class="fixedBottom">Distance from the sun: <span id="distance_from_the_sun"></span></p>
 
     <nav>
       <div class="navTo" data-nav="sun">
@@ -58,6 +141,519 @@
     </nav>
 
 
+    <div id="sun_description" class="description">
+      <div>
+        <b>Sun</b>
+        <br><br>
+
+        <p class="desc">The Sun is the Solar System's star and by far its most massive component. Its large mass, which comprises 99.86% of all the mass in the Solar System, produces temperatures and densities in its core high enough to sustain nuclear fusion of hydrogen into helium, making it a main-sequence star. This releases an enormous amount of energy, mostly radiated into space as electromagnetic radiation peaking in visible light. The Sun's temperature is intermediate between that of the hottest stars and that of the coolest stars.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="mercury_description" class="description">
+      <div>
+        <b>Mercury</b>
+        <br><br>
+
+        <p class="desc">Mercury is the closest planet to the Sun and the smallest one in the Solar System.<br>Mercury has no natural satellites. Besides impact craters, its only known geological features are lobed ridges or rupes that were probably produced by a period of contraction early in its history.<br>Mercury's very tenuous atmosphere consists of atoms blasted off its surface by the solar wind. Its relatively large iron core and thin mantle have not yet been adequately explained.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="venus_description" class="description">
+      <div>
+        <b>Venus</b>
+        <br><br>
+
+        <p class="desc">Venus is close in size to Earth and, like Earth, has a thick silicate mantle around an iron core, a substantial atmosphere, and evidence of internal geological activity.<br>It is much drier than Earth, and its atmosphere is ninety times as dense.<br>It is the hottest planet, most likely due to the amount of greenhouse gases in the atmosphere. No definitive evidence of current geological activity has been detected on Venus, but it has no magnetic field that would prevent depletion of its substantial atmosphere, which suggests that its atmosphere is being replenished by volcanic eruptions.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="earth_description" class="description">
+      <div>
+        <b>Earth</b>
+        <br><br>
+
+        <p class="desc">Earth is the largest and densest of the inner planets, the only one known to have current geological activity, and the only place where life is known to exist.<br>Its liquid hydrosphere is unique among the terrestrial planets, and it is the only planet where plate tectonics has been observed.<br>Earth's atmosphere is radically different from those of the other planets, having been altered by the presence of life to contain 21% free oxygen. It has one natural satellite, the Moon, the only large satellite of a terrestrial planet in the Solar System.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="mars_description" class="description">
+      <div>
+        <b>Mars</b>
+        <br><br>
+
+        <p class="desc">Mars is smaller than Earth and Venus. It has an atmosphere of mostly carbon dioxide with a surface pressure of 6.1 millibars.<br>Its surface, peppered with vast volcanoes, such as Olympus Mons, and rift valleys, such as Valles Marineris, shows geological activity that may have persisted until as recently as 2 million years ago.<br>Its red color comes from iron oxide in its soil. Mars has two tiny natural satellites (Deimos and Phobos) thought to be either captured asteroids, or ejected debris from a massive impact early in Mars's history.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="jupiter_description" class="description">
+      <div>
+        <b>Jupiter</b>
+        <br><br>
+
+        <p class="desc">Jupiter, is 2.5 times the mass of all the other planets put together.<br>It is composed largely of hydrogen and helium. Jupiter's strong internal heat creates semi-permanent features in its atmosphere, such as cloud bands and the Great Red Spot.<br>Jupiter has 79 known satellites. The four largest, Ganymede, Callisto, Io, and Europa, show similarities to the terrestrial planets, such as volcanism and internal heating. Ganymede, the largest satellite in the Solar System, is larger than Mercury.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="saturn_description" class="description">
+      <div>
+        <b>Saturn</b>
+        <br><br>
+
+        <p class="desc">Saturn, distinguished by its extensive ring system, has several similarities to Jupiter, such as its atmospheric composition and magnetosphere.<br>Although Saturn has 60% of Jupiter's volume, it is less than a third as massive. Saturn is the only planet of the Solar System that is less dense than water.<br>The rings of Saturn are made up of small ice and rock particles.<br>Saturn has 82 confirmed satellites composed largely of ice. Two of these, Titan and Enceladus, show signs of geological activity. Titan, the second-largest moon in the Solar System, is larger than Mercury and the only satellite in the Solar System with a substantial atmosphere.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="uranus_description" class="description">
+      <div>
+        <b>Uranus</b>
+        <br><br>
+
+        <p class="desc">Uranus, is the lightest of the outer planets. Uniquely among the planets, it orbits the Sun on its side; its axial tilt is over ninety degrees to the ecliptic.<br>It has a much colder core than the other giant planets and radiates very little heat into space. Uranus has 27 known satellites, the largest ones being Titania, Oberon, Umbriel, Ariel, and Miranda.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="neptune_description" class="description">
+      <div>
+        <b>Neptune</b>
+        <br><br>
+
+        <p class="desc">Neptune, though slightly smaller than Uranus, is more massive and hence more dense.<br>It radiates more internal heat, but not as much as Jupiter or Saturn. Neptune has 14 known satellites. The largest, Triton, is geologically active, with geysers of liquid nitrogen. Triton is the only large satellite with a retrograde orbit.</p>
+
+        <br><br>
+        <b>Informations:</b>
+        <br><br>
+
+        <div class="row">
+          <img src="img/icons/type.png" class="_image" alt="type">&nbsp;Type:&nbsp;<span class="type"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/distance.png" class="_image" alt="distance">&nbsp;Distance:&nbsp;<span class="distance"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/size.png" class="_image" alt="size">&nbsp;Size (diameter):&nbsp;<span class="size"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rotation.png" class="_image" alt="rotation">&nbsp;Rotation:&nbsp;<span class="rotation"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/revolution.png" class="_image" alt="revolution">&nbsp;Revolution:&nbsp;<span class="revolution"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/mass.png" class="_image" alt="mass">&nbsp;Mass:&nbsp;<span class="mass"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/tilt.png" class="_image" alt="tilt">&nbsp;Tilt:&nbsp;<span class="tilt"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/gravity.png" class="_image" alt="gravity">&nbsp;Gravity:&nbsp;<span class="gravity"></span>
+        </div>
+        <div class="row">
+          <img src="img/icons/temperature.png" class="_image" alt="temperature">&nbsp;Temperature:&nbsp;<span class="temperature"></span>
+        </div>
+        <br>
+        <div class="row">
+          <img src="img/icons/rings.png" class="_image" alt="rings">&nbsp;Rings:&nbsp;<span class="rings"></span>
+        </div>
+      </div>
+    </div>
+
+
+    <script type="application/javascript">
+      const loading = document.querySelector('#loading');
+      const dots = document.querySelector('#dots');
+      const loadingText = document.querySelector('#loadingText');
+      const parts = ['assets', 'planets', 'black holes (hum, skipped)', 'stars'];
+      let index = 1;
+
+      const options = {
+        duration: 250,
+        iterations: 1,
+        fill: 'forwards',
+        easing: 'ease-in-out'
+      };
+
+
+      let dots_index = 0;
+
+      updateDots(0);
+      function updateDots(number){
+        let str = '';
+        for(let i = 0; i < number; i++){
+          str += '.';
+        }
+        dots.textContent = str;
+      }
+
+      const dotsInterval = setInterval(() => {
+        if(dots_index >= 4){
+          dots_index = 0;
+        }
+        updateDots(dots_index);
+        dots_index++;
+      }, 500);
+
+      const loadingInterval = setInterval(() => {
+        const anim = loadingText.animate(
+                [
+                  { transform: 'translateY(0)', opacity: 1 },
+                  { transform: 'translateY(-30px)', opacity: 0 },
+                ], options
+        );
+        anim.onfinish = () => {
+          loadingText.textContent = parts[index];
+          index >= (parts.length - 1) ? index = 0 : index++;
+
+          setTimeout(() => {
+            loadingText.animate(
+              [
+                { transform: 'translateY(30px)', opacity: 0 },
+                { transform: 'translateY(0)', opacity: 1 },
+              ], options
+            );
+            clearInterval(dotsInterval);
+            clearInterval(loadingInterval);
+          }, 50);
+        }
+      }, 1500);
+
+      function goTo(scroll){
+        window.scrollTo({
+          top: scroll,
+          behavior: 'smooth'
+        });
+      }
+
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const anim = loading.animate(
+                  [
+                    { opacity: 1 },
+                    { opacity: 0 },
+                  ], options
+          );
+          anim.onfinish = () => {
+            loading.remove();
+            goTo(200);
+          }
+        }, 1000);
+      });
+    </script>
     <script type="module" src="/main.js"></script>
 
   </body>

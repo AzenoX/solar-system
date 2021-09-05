@@ -1,9 +1,16 @@
+:root{
+  --accent: #037d96;
+}
+
 *,*::before,*::after{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 
   font-family: 'Montserrat', sans-serif;
+}
+html{
+  overflow-x: hidden;
 }
 
 canvas{
@@ -53,6 +60,7 @@ body{
   /*Box Model*/
 
   /*Typography*/
+  color: #fff;
 
   /*Manipulation*/
   transform: translateX(-50%);
@@ -60,6 +68,7 @@ body{
   /*Misc*/
 
 }
+
 
 nav{
   /*Display*/
@@ -79,7 +88,6 @@ nav{
   /*Misc*/
 
 }
-
 nav > div{
   /*Display*/
   display: flex;
@@ -89,14 +97,14 @@ nav > div{
   /*Positioning*/
 
   /*Box Model*/
-  background: rgba(25, 118, 210, 0.8);
-  margin-bottom: 1vh;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--accent);
+  margin-bottom: 2vh;
   padding: 0.2em 1em;
 
   /*Typography*/
 
   /*Manipulation*/
-  clip-path: polygon(0% 0%, 95% 0%, 100% 15%, 100% 100%, 10% 100%, 0% 70%);
   transform: translateX(0);
   transition: transform 0.15s ease-in-out;
 
@@ -104,10 +112,67 @@ nav > div{
   filter: drop-shadow(0 0 3px #000);
   cursor: pointer;
 }
+nav > div::before{
+  content: '';
+
+  /*Display*/
+
+  /*Positioning*/
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  height: 30px;
+  width: 30px;
+
+  /*Box Model*/
+  z-index: 100;
+  background: var(--accent);
+
+  /*Typography*/
+
+  /*Manipulation*/
+  clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 10% 10%, 10% 100%, 0% 100%);
+  transition: top 0.2s ease, left 0.2s ease;
+
+  /*Misc*/
+
+}
+nav > div::after{
+  content: '';
+
+  /*Display*/
+
+  /*Positioning*/
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  height: 30px;
+  width: 30px;
+
+  /*Box Model*/
+  z-index: 100;
+  background: var(--accent);
+
+  /*Typography*/
+
+  /*Manipulation*/
+  clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0% 90%, 90% 90%, 90% 0%);
+  transition: bottom 0.2s ease, right 0.2s ease;
+
+  /*Misc*/
+
+}
+nav > div:hover::before{
+  top: -12px;
+  left: -12px;
+}
+nav > div:hover::after{
+  bottom: -12px;
+  right: -12px;
+}
 nav > div:hover{
   transform: translateX(-1vw);
 }
-
 nav > div > img{
   /*Display*/
 
@@ -124,7 +189,6 @@ nav > div > img{
   /*Misc*/
 
 }
-
 nav > div > p{
   /*Display*/
 
@@ -134,9 +198,130 @@ nav > div > p{
 
   /*Typography*/
   font-size: 1.2em;
+  color: #fff;
 
   /*Manipulation*/
 
   /*Misc*/
 
 }
+
+
+/*=======================
+    Descriptions
+========================*/
+.description{
+  /*Display*/
+  display: block;
+
+  /*Positioning*/
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  width: 30%;
+  height: max-content;
+
+  /*Box Model*/
+
+  /*Typography*/
+  color: #fff;
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
+.description > *{
+  /*Display*/
+
+  /*Positioning*/
+  position: relative;
+
+  /*Box Model*/
+  padding: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--accent);
+
+  /*Typography*/
+  z-index: 100;
+  text-align: left;
+
+  /*Manipulation*/
+
+  /*Misc*/
+
+}
+.description .desc{
+  font-size: 0.8em;
+}
+.description .row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 0.1em 0;
+}
+.description ._image{
+  height: 30px;
+  width: 30px;
+}
+.description::before{
+  content: '';
+
+  /*Display*/
+
+  /*Positioning*/
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  height: 100px;
+  width: 100px;
+
+  /*Box Model*/
+  z-index: 100;
+  background: var(--accent);
+
+  /*Typography*/
+
+  /*Manipulation*/
+  clip-path: polygon(0% 0%, 100% 0%, 100% 5%, 5% 5%, 5% 100%, 0% 100%);
+  transition: top 0.2s ease, left 0.2s ease;
+
+  /*Misc*/
+
+}
+.description::after{
+  content: '';
+
+  /*Display*/
+
+  /*Positioning*/
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  height: 100px;
+  width: 100px;
+
+  /*Box Model*/
+  z-index: 100;
+  background: var(--accent);
+
+  /*Typography*/
+
+  /*Manipulation*/
+  clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0% 95%, 95% 95%, 95% 0%);
+  transition: bottom 0.2s ease, right 0.2s ease;
+
+  /*Misc*/
+
+}
+.description:hover::before{
+  top: -25px;
+  left: -25px;
+}
+.description:hover::after{
+  bottom: -25px;
+  right: -25px;
+}
+
+
