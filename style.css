@@ -75,6 +75,11 @@ body{
     display: none;
   }
 }
+@media screen and (max-width: 1129px) {
+  #bg{
+    display: none;
+  }
+}
 
 .fixedBottom{
   /*Display*/
