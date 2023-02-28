@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "micromodal": "^0.4.10",
-    "three": "^0.132.2"
+    "three": "^0.149.0"
   }
 }
